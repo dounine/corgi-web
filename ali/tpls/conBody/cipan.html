@@ -1,0 +1,30 @@
+<div class="gridSection" ng-controller="user">
+	<table class="table">
+		<tr class="info">
+			<th>序号</th>
+			<th>用户名</th>
+			<th>密码</th>
+			<th>性别</th>
+			<th>邮箱</th>
+			<th>手机号码</th>
+			<th>状态</th>
+			<th>操作</th>
+		</tr>
+		<tr ng-repeat="user in users">
+			<td>{{user.index}}</td>
+			<td>{{user.username}}</td>
+			<td>{{user.password}}</td>
+			<td>{{user.sex}}</td>
+			<td>{{user.email}}</td>
+			<td>{{user.tel}}</td>
+			<td>正常</td>
+			<td>
+				<button ng-click="remove(user.index)">删除</button>
+				<button ui-sref = "home.reviseuser({userId:{{user.index}}})">修改</button>
+			</td>
+		</tr>
+	</table>
+	<button class="btn btn-primary" ui-sref="home.adduesr">增加用户</button>
+	
+	
+</div>

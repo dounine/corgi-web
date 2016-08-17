@@ -1,0 +1,21 @@
+@keyframes slideOutLeft {
+    to      { transform: translateX(-100%); }
+}
+@-moz-keyframes slideOutLeft {  
+    to      { -moz-transform: translateX(-100%); }
+}
+@-webkit-keyframes slideOutLeft {
+    to      { -webkit-transform: translateX(-100%); }
+}
+@keyframes slideInRight {
+    from    { transform:translateX(100%); }
+    to      { transform: translateX(0); }
+}
+@-moz-keyframes slideInRight {
+    from    { -moz-transform:translateX(100%); }
+    to      { -moz-transform: translateX(0); }
+}
+@-webkit-keyframes slideInRight {
+    from    { -webkit-transform:translateX(100%); }
+    to      { -webkit-transform: translateX(0); }
+}

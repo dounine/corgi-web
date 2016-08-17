@@ -1,0 +1,22 @@
+[{
+	"index":"1",
+	"username":"admin1",
+	"password":"123456",
+	"sex":"男",
+	"email":"123456@qq.com",
+	"tel":"1383838438"
+},{
+	"index":"2",
+	"username":"admin2",
+	"password":"654321",
+	"sex":"女",
+	"email":"654321@qq.com",
+	"tel":"1383838438"
+},{
+	"index":"3",
+	"username":"admin3",
+	"password":"abc123",
+	"sex":"女",
+	"email":"abc123@qq.com",
+	"tel":"1383835555"
+}]
