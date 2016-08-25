@@ -21,6 +21,7 @@ ul li{list-style: none;}
 
 .menuLeft{position: fixed;top: 50px;bottom:0;z-index: 20;width: 65px;background: #101010;height: 100%;padding: 0;}
 .menuLeft .menuBtn{height: 30px;line-height: 30px;text-align: center;display: inline-block;background: #122B40;width: 100%;}
+.menuLeft .menuBtn .addtap{position: absolute;left:50px ;z-index: 9900;}
 .btnT_open{width: 150px;}
 .btnT_close{width: 65px;}
 .btnT_close ul li a span{display: none;}

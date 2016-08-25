@@ -87,6 +87,7 @@ ul li {
     display: inline-block;
     background: #122B40;
     width: 100%; }
+
   .menuLeft ul li {
     width: 100%;
     height: 40px; }
@@ -321,7 +322,9 @@ ul li {
       color: green; }
     .content .content_con .input_con {
       height: 38px; }
-
+#loading-bar .bar{
+	background: red !important;
+}
 @media (max-width: 1500px) {
   .conCon_open {
     width: 85%;
