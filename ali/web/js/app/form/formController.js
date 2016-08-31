@@ -4,7 +4,7 @@
 
 define(['app'],function(app){
     /********严格模式下报错未解决********/
-    //"use strict";
+//    "use strict";
     //表单删除
     app.controller('user',function ($scope,$http,$state,$stateParams,cfpLoadingBar) {
         $scope.start = function() {
@@ -24,7 +24,9 @@ define(['app'],function(app){
                 $scope.remove = function (id) {
                     var ind=_this.findIndex(id);
                     console.log(ind)
-
+//					function del () {
+//						
+//					}
                     if(ind!==-1){
                         data.splice(ind,1);  //从第index位删除一位
                     }

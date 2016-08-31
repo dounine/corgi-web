@@ -157,12 +157,7 @@ ul li {
   .content .onNav {
     background: #fff;
     font-weight: 700; }
-  .content .conCon_open {
-    margin-left: 280px;
-    width: 90%; }
-  .content .conCon_close {
-    margin-left: 200px;
-    width: 94%; }
+
   .content .content_con {
     margin-top: 30px; }
     .content .content_con .homeTop {
@@ -377,13 +372,22 @@ ul li {
 .ngPagerControl button {
   padding-left: 5px; }
 
-@media (max-width: 1500px) {
+
+@media(min-width:1200px){
+	  .content .conCon_open {
+	    margin-left: 300px;
+	    width: 85%; }
+	  .content .conCon_close {
+	    margin-left: 220px;
+	    width: 90%; }
+}
+@media (max-width: 1200px) {
   .conCon_open {
-    width: 85%;
-    margin-left: 300px; }
+    width: 82%;
+    margin-left: 310px; }
 
   .conCon_close {
-    width: 85%;
+    width: 89%;
     margin-left: 230px; } }
 
 /*# sourceMappingURL=ali.css.map */
