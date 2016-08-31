@@ -1,0 +1,45 @@
+
+<div class="modal_form add-delTab " ng-controller="add-delTab" >
+	<!-- Button trigger modal -->
+	<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" >
+		新增选项卡菜单
+	</button>
+
+	<!-- Modal -->
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" data-backdrop="static">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content"  >
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" style="font-size:20px">X</span></button>
+					<h4 class="modal-title" id="myModalLabel">自定义产品与服务快捷入口</h4>
+				</div>
+				<div class="selectedTab clearfix"><!--已选-->
+					<h5>已选区域</h5>
+					<ul ng-repeat="selectedTab in selectedTabs">
+						<li class="selectedTab_con pull-left">
+							<span class="{{selectedTab.icon}} pull-left tab_icon"></span>
+							<span class="selectedTab_text">{{selectedTab.text}}&nbsp;</span>
+							<span class=" tab_close pull-right" ng-click="close(selectedTab.index)">X</span>
+						</li>
+
+					</ul>
+				</div>
+				<div class="optionalTab clearfix">
+					<h5>可选区域</h5>
+					<div ng-repeat="optionalTab in optionalTabs">
+						<div class="optionalTab pull-left" ng-click="addtab(optionalTab.index)">
+							<span class="{{optionalTab.icon}} pull-left tab_icon"></span>
+							<span class="optionalTab_text">{{optionalTab.text}}&nbsp;</span>
+							<span class=" tab_close pull-right"  >+</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+					<button type="submit" class="btn btn-primary">提交</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>	

@@ -24,7 +24,7 @@ module.exports = function(grunt) {
     bower :{
       install:{
         options:{
-          targetDir: './js/lib',
+          targetDir: './web/js/lib',
           layout: 'byComponent',
           install: true,
           verbose: false,
@@ -45,7 +45,7 @@ module.exports = function(grunt) {
       main: {
         files: [{
           src: ['bower_components/bootstrap/dist/css/bootstrap.css'],
-          dest: 'js/lib/bootstrap/bootstrap.css',
+          dest: 'web/js/lib/bootstrap/bootstrap.css',
         }]
       }
     },

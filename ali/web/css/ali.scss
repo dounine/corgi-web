@@ -1,0 +1,252 @@
+*{margin: 0;padding: 0;font-size: 12px;}
+body{height: 100%;overflow-x: hidden;}
+ul li{list-style: none;}
+
+//header头部菜单样式
+.header{
+    height: 50px;background:#09C;position: fixed;width: 100%;margin: 0;z-index: 20;
+    .logo{
+        width: 50px; height: 50px;background: #0087b4;line-height: 50px;float: left;
+        img{width: 40px;margin-left: 5px;}
+    }
+    .header_left{float: left;
+        .productBody{
+            position: absolute;width: 600px;padding: 10px;z-index: 20;
+            .list{float: left;
+                p{color: #666;font-weight: 700;}
+                ul li{
+                    height: 30px;line-height: 30px;
+                    a{height: 30px;color: #000;font-weight: 500;}
+                }
+            }
+        }
+    }
+    .header_right{float: right;margin-right: 20px;
+        li .Gd li{
+            background: #fff;height: 40px;line-height: 40px;
+            a{color: #000;height: 30px;line-height: 30px;}
+        }
+    }
+    .header_left>li,.header_right>li{
+        float: left;height: 50px;line-height: 50px;border-left:1px solid #0087b4 ;
+    }
+    .header_left>li:hover,.header_right>li:hover{background:#0087b4 ;}
+    .header_left li a,.header_right li a {
+        height: 50px;display: inline-block;text-decoration: none;padding: 0 15px;font-weight: 600;color: #fff;
+    }
+    
+}
+
+//menuleft样式
+.menuLeft{
+    position: fixed;top: 50px;bottom: 0;z-index: 20;width: 65px;background: #101010;height: 100%;padding: 0;
+    .menuBtn{
+        height: 30px;line-height: 30px;text-align: center;display: inline-block;background: #122B40;width: 100%;
+    }
+    ul li{
+        width: 100%;height: 40px;
+        a{
+           width:100%;height: 40px;display: inline-block;text-decoration: none;text-align: center;line-height: 40px;color: #ccc;
+           &:hover{background: #204D74;} 
+        }
+    }
+}
+.btnT_open{width: 150px;}
+.btnT_close{
+    width: 65px;
+    ul li a{
+        span{display: none;}
+        &:hover span{display: block;position: absolute;width: 80px;top: 0;left: 67px;background: #204D74;}
+    }
+}
+
+//content样式
+.content{
+    position: relative;top: 49px;left: -90px; width: 100%;
+    .content_nav{
+        width: 180px;position:fixed;top: 50px;z-index: 10;bottom:0;background: #eaedf1;padding: 0;
+        ul{
+            width: 180px;
+            li{
+                width: 180px;
+                a{
+                   color: #000;display: inline-block;width: 100%;height: 30px;text-decoration: none;line-height: 30px;padding-left: 25px; 
+                    span{padding-right: 20px;height: 30px;line-height: 30px;}
+                }
+                ul li a{padding-left: 50px;}
+            }
+        }
+    }
+    .conNav_open{left: 135px;}
+    .conNav_close{left:50px}
+    .active {background:#fff;font-weight: 700;}
+    .onNav{background: #fff;font-weight: 700;}
+    .conCon_open{margin-left: 280px;width: 90%;}
+    .conCon_close{margin-left: 200px;width: 94%;}
+    .content_con{
+        margin-top: 30px;
+        .homeTop{
+            height: 50px;border: 1px solid #ccc;margin-top: 20px;
+            .text{
+                float: left;margin-left: 10px;
+                h4{height: 30px;line-height: 30px;}
+            }
+            .btnn{float:right;padding: 10px;}
+        }
+        .security{
+            height: 120px;
+            .security_icon{
+                .aqicon{width: 50px;height: 50px;display: inline-block;background: url(../img/g12.png);background-size: cover;}
+                .text{position: relative;top: -20px;left: 10px;}
+            }
+            .event_wrap{
+                margin-top: 20px;
+                li{
+                    float: left;width: 25%;
+                    span{color: green;margin-right: 10px;font-size: 16px;}
+                }
+            }
+        }
+        h5{margin-left: 15px;padding-left: 10px; border-left: 2px solid #88B7E0;}
+        .myResource .tab{
+            border: 1px solid #ccc;padding: 0;width: 48%;margin:1% 1%;
+            .tab_title{
+                border-bottom: 1px solid #ccc;height: 40px;line-height: 40px;padding-left:10px;
+                span{font-size: 16px;font-weight: 700;}
+                a{display: inline-table;width:40px;height: 40px;font-size: 25px;line-height: 40px;text-decoration: none;}
+            }
+            .tab_con{
+                padding: 30px 25px;
+                .tc_left li{text-align: center;}
+                ul li{
+                    height: 24px;line-height: 24px;margin-bottom: 16px;width: 130px;background: #f3f3f3;font-size: 14px;
+                    a{
+                        color: #000;text-decoration: none;
+                        span{margin-right: 15px;}
+                    }
+                }
+                .line{margin: 10px;text-decoration: none;}
+            }
+        }
+        
+        .subpage {
+            .consoleTitle{
+                border-bottom:1px solid #ddd ;height: 50px;
+                h5{float: left;border-left: 2px solid #88B7E0;text-align: center;margin-right: 10px;padding-left: 5px;}
+                ul li{
+                    float: left;width: 50px;height: 30px;text-align: center;line-height: 30px;background: #D9DEE4;margin-left: 2px;
+                    a{color:#444;width: 50px;height: 30px;text-align: center;line-height: 30px;text-decoration: none;}
+                }
+            }
+            .consoleSearch{
+                margin-top: 20px;height: 50px;
+                .selec{
+                    width: 120px;float: left;margin-right: 5px;
+                }
+            }
+            .gridSection{clear: both;} 
+        }
+        
+//  操作界面    
+        .cz_title{
+            height: 45px;border-bottom: 1px solid #ccc;line-height: 45px;
+            h5{margin-top: 28px;}
+        } 
+        .cz_con .info{
+            height: 30px;background: #dff0d8;line-height: 30px;margin-top: 10px;border: 1px solid #C7DDB9;
+            li{color: #008000;list-style: inside;padding-left: 10px;}
+            
+        }
+        .cz_search{
+            height: 50px;
+            li{
+                float: left;margin: 0 10px;height: 25px;line-height: 25px;padding-top: 10px;
+                select{height: 30px;height: 30px;}
+            }
+        }
+        .table{background: #F5F6FA;color: #666;}
+    
+        .content_con .adduser{width: 500px;}
+        .form-success{border: 1px solid green;}
+        .form-err{border: 1px solid red;}
+        .form-iferr{color: red;}
+        .input_result{position: relative;top: -25px;left: 95%;}
+        p.success{color: green;}
+        .input_con{height: 38px;}
+
+    //镜像界面
+        .add-delTab{
+            .selectedTab{
+                width:90%;
+                margin:10px auto;
+                padding-bottom:10px;
+                border-bottom:1px dashed #ddd;
+                .selectedTab_con{
+                    border:1px solid #37a9d5;
+                    width:31%;
+                    height:32px;
+                    line-height:32px;
+                    padding-left:5px;
+                    margin:5px;
+                    &:hover{cursor:pointer}
+
+                    .selectedTab_text{
+                        margin-left:8px;
+                    }
+                }
+            }
+        }
+        .optionalTab{
+            width:90%;
+            margin:0 auto 20px;
+
+            .optionalTab{
+                border:1px solid #ccc;
+                width:31%;
+                height:32px;
+                line-height:32px;
+                padding-left:5px;
+                margin:5px;
+                color:#ccc;
+                .tab_close{display:none}
+                &:hover{
+                    border:1px solid #37a9d5;
+                    color:#000;
+                    .tab_close{display:block;font-size:20px}
+                }
+                .optionalTab_text{
+                    margin-left:8px;
+                }
+            }
+        }
+
+        .tab_icon{
+            width:10px;
+            height:30px;
+            text-align:center;
+            line-height:30px;
+        }
+        .tab_close{
+            border-left:1px solid #37a9d5;
+            width:30px;
+            height:30px;
+            text-align:center;
+            line-height:30px;
+            color:#37a9d5;
+        }
+    }
+    
+}
+#loading-bar .bar{
+    background: red !important;
+}
+.ngPagerControl button{
+    padding-left:5px;
+}
+
+
+@media (max-width: 1500px) { 
+        .conCon_open{width: 85%;margin-left:300px;}
+        .conCon_close{width: 85%;margin-left: 230px;}
+     }
+
