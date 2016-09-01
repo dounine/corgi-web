@@ -81,8 +81,7 @@ ul li{list-style: none;}
     .conNav_close{left:50px}
     .active {background:#fff;font-weight: 700;}
     .onNav{background: #fff;font-weight: 700;}
-    .conCon_open{margin-left: 280px;width: 90%;}
-    .conCon_close{margin-left: 200px;width: 94%;}
+
     .content_con{
         margin-top: 30px;
         .homeTop{
@@ -146,6 +145,27 @@ ul li{list-style: none;}
             }
             .gridSection{clear: both;} 
         }
+
+        //磁盘
+        .popup {
+            width:300px;
+            position:fixed;
+            left: 50%;
+            top:40%;
+            margin-left:-150px;
+            .delpopup{
+                p{
+                    padding-top:20px;
+                    strong{font-size:24px;}
+                    text-align:center;
+
+                }
+                button{margin:5px}
+            }
+        .hide{display:none}
+        .show{display:block}
+        }
+
         
 //  操作界面    
         .cz_title{
@@ -245,8 +265,31 @@ ul li{list-style: none;}
 }
 
 
-@media (max-width: 1500px) { 
-        .conCon_open{width: 85%;margin-left:300px;}
-        .conCon_close{width: 85%;margin-left: 230px;}
-     }
+@media (min-width:1400px){
+    .content .conCon_open {
+        margin-left: 310px;
+        width: 84%; }
+    .content .conCon_close {
+        margin-left: 220px;
+        width: 90%; }
+}
+
+@media (min-width: 1200px) and (max-width: 1400px) {
+    .content .conCon_open {
+        margin-left: 330px;
+        width: 80%; }
+    .content .conCon_close {
+        margin-left: 240px;
+        width: 87%; }
+}
+
+
+@media (max-width: 1200px) {
+    .conCon_open {
+        width: 78%;
+        margin-left: 330px; }
+
+    .conCon_close {
+        width: 86%;
+        margin-left: 240px; } }
 

@@ -16,30 +16,35 @@ define(['app'],function(app){
             cfpLoadingBar.complete();
 
         }
+        $scope.isdelpopup = false;
+        $scope.isdeled = false;
         $http.get("data/user.json")
             .success(function (data,index) {
                 $scope.complete();
+
                 var _this = this;
                 $scope.users = data;
+
                 $scope.remove = function (id) {
                     var ind=_this.findIndex(id);
-                    console.log(ind)
-//					function del () {
-//						
-//					}
-                    if(ind!==-1){
-                        data.splice(ind,1);  //从第index位删除一位
+                    function del(){
+                        $scope.isdelpopup = true;
+
                     }
+                    del()
+                    //if(ind!==-1){
+                    //    data.splice(ind,1);  //从第index位删除一位
+                    //
+                    //}
                 }
 
 
                 //找到该元素的索引
                  this.findIndex=function(id){
-                     console.log(id)
                     var ind=-1;
                     //angular里的forEach里的value对应的是循环遍历的每一个元素，而key对应的是索引值
                     angular.forEach(data,function(item,key){
-                        		        	console.log(key)
+                        		        	//console.log(key)
                         if(item.index===id){
                             ind=key;
                             return;

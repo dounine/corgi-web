@@ -1,9 +1,13 @@
 
 
 <div class="gridSection" ng-controller="user">
-	<div class="alert alert-success alert-dismissible" role="alert">
-	  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-	  <strong>文件已删除!</strong>
+	<div class="popup">
+		<div class="alert alert-danger alert-dismissible delpopup clearfix " role="alert" ng-class="{true:'show',false:'hide'}[isdelpopup]">
+			<p><strong>确定删除？</strong></p>
+			<button class="btn btn-danger pull-right">确定</button>
+			<button class="btn btn-danger pull-right" >取消</button>
+		</div>
+		<div  class="alert alert-success deled" role="alert" ng-class="{true:'show',false:'hide'}[isdeled]">文件已删除！</div>
 	</div>
 	<table class="table">
 		<tr class="info">
@@ -25,6 +29,7 @@
 			<td>{{user.tel}}</td>
 			<td>正常</td>
 			<td>
+				<!--<button ng-click="remove(user.index)">删除</button>-->
 				<button ng-click="remove(user.index)">删除</button>
 				<button ui-sref = "home.reviseuser({userId:{{user.index}}})">修改</button>
 			</td>
