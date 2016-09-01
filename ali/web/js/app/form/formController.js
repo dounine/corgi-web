@@ -16,8 +16,8 @@ define(['app'],function(app){
             cfpLoadingBar.complete();
 
         }
-        $scope.isdelpopup = false;
-        $scope.isdeled = false;
+        //$scope.isdelpopup = false;
+        //$scope.isdeled = false;
         $http.get("data/user.json")
             .success(function (data,index) {
                 $scope.complete();
@@ -27,15 +27,15 @@ define(['app'],function(app){
 
                 $scope.remove = function (id) {
                     var ind=_this.findIndex(id);
-                    function del(){
-                        $scope.isdelpopup = true;
-
-                    }
-                    del()
-                    //if(ind!==-1){
-                    //    data.splice(ind,1);  //从第index位删除一位
+                    //function del(){
+                    //    $scope.isdelpopup = true;
                     //
                     //}
+                    //del()
+                    if(ind!==-1){
+                        data.splice(ind,1);  //从第index位删除一位
+
+                    }
                 }
 
 
