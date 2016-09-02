@@ -147,23 +147,16 @@ ul li{list-style: none;}
         }
 
         //磁盘
-        .popup {
-            width:300px;
-            position:fixed;
-            left: 50%;
-            top:40%;
-            margin-left:-150px;
-            .delpopup{
-                p{
-                    padding-top:20px;
-                    strong{font-size:24px;}
-                    text-align:center;
-
-                }
-                button{margin:5px}
+        .popup{
+            .deled{
+                position:fixed;
+                left:50%;
+                top:40%;
+                margin-left:-150px;
+                width:300px;
+                font-size:30px;
+                text-align:center;
             }
-        .hide{display:none}
-        .show{display:block}
         }
 
         
@@ -257,6 +250,8 @@ ul li{list-style: none;}
     }
     
 }
+
+.modal-backdrop{ background:rgba(255,255,255,0.5);}
 #loading-bar .bar{
     background: red !important;
 }

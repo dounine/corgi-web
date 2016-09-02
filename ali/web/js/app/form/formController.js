@@ -6,7 +6,7 @@ define(['app'],function(app){
     /********严格模式下报错未解决********/
 //    "use strict";
     //表单删除
-    app.controller('user',function ($scope,$http,$state,$stateParams,cfpLoadingBar) {
+    app.controller('user',function ($scope,$http,$state,$stateParams,cfpLoadingBar,$timeout) {
         $scope.start = function() {
             cfpLoadingBar.start();
         };
@@ -24,18 +24,38 @@ define(['app'],function(app){
 
                 var _this = this;
                 $scope.users = data;
+                $scope.isdeled = false;
+
+
+
+
 
                 $scope.remove = function (id) {
                     var ind=_this.findIndex(id);
-                    //function del(){
-                    //    $scope.isdelpopup = true;
-                    //
-                    //}
-                    //del()
-                    if(ind!==-1){
-                        data.splice(ind,1);  //从第index位删除一位
-
+                    //console.log(id)
+                    $scope.sure = function(id){
+                        console.log(id)
                     }
+
+                    //$scope.isdeled = true;
+
+                        //del()
+
+                        function del(){
+
+
+                            if(ind!==-1){
+                                data.splice(ind,1);  //从第index位删除一位
+                                $scope.isdeled = true;
+                            }
+
+                            $timeout(function(){
+                                $scope.isdeled = false;
+
+                            },1000)
+                        };
+
+
                 }
 
 
@@ -45,10 +65,10 @@ define(['app'],function(app){
                     //angular里的forEach里的value对应的是循环遍历的每一个元素，而key对应的是索引值
                     angular.forEach(data,function(item,key){
                         		        	//console.log(key)
-                        if(item.index===id){
-                            ind=key;
-                            return;
-                        }
+                            if(item.index===id){
+                                ind=key;
+                                return;
+                            }
                     });
                     return ind;
                 }

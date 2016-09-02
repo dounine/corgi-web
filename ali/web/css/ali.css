@@ -269,19 +269,14 @@ ul li {
         margin-right: 5px; }
     .content .content_con .subpage .gridSection {
       clear: both; }
-    .content .content_con .popup {
-      width: 300px;
+    .content .content_con .popup .deled {
       position: fixed;
       left: 50%;
       top: 40%;
-      margin-left: -150px; }
-      .content .content_con .popup .delpopup p {
-        padding-top: 20px;
-        text-align: center; }
-        .content .content_con .popup .delpopup p strong {
-          font-size: 24px; }
-      .content .content_con .popup .delpopup button {
-        margin: 5px; }
+      margin-left: -150px;
+      width: 300px;
+      font-size: 30px;
+      text-align: center; }
     .content .content_con .cz_title {
       height: 45px;
       border-bottom: 1px solid #ccc;
@@ -377,6 +372,9 @@ ul li {
       text-align: center;
       line-height: 30px;
       color: #37a9d5; }
+
+.modal-backdrop {
+  background: rgba(255, 255, 255, 0.5); }
 
 #loading-bar .bar {
   background: red !important; }

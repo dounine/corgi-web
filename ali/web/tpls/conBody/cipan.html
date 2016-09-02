@@ -2,11 +2,13 @@
 
 <div class="gridSection" ng-controller="user">
 	<div class="popup">
-		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" >
 			<div class="modal-dialog" role="document">
 				<div class="modal-content">
 					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span></button>
 						<h4 class="modal-title" id="myModalLabel">Modal title</h4>
 					</div>
 					<div class="modal-body">
@@ -14,12 +16,12 @@
 					</div>
 					<div class="modal-footer">
 						<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-						<button type="button" class="btn btn-primary">确定</button>
+						<button type="button" class="btn btn-primary" ng-click="sure(user.index)">确定</button>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div  class="alert alert-success deled" role="alert" ng-class="{true:'show',false:'hide'}[isdeled]">文件已删除！</div>
+		<div  class="alert alert-success deled " role="alert" ng-class="{true:'show',false:'hide'}[isdeled]">文件已删除！</div>
 	</div>
 	<table class="table">
 		<tr class="info">
@@ -42,9 +44,11 @@
 			<td>正常</td>
 			<td>
 				<!--<button ng-click="remove(user.index)">删除</button>-->
-				<button ng-click="remove(user.index)" data-toggle="modal" data-target="#myModal">删除</button>
+				<button  data-toggle="modal" data-target="#myModal" ng-click="remove(user.index)">删除</button>
 				<button ui-sref = "home.reviseuser({userId:{{user.index}}})">修改</button>
+
 			</td>
+
 		</tr>
 	</table>
 	<button class="btn btn-primary" ui-sref="home.adduesr">增加用户</button>
