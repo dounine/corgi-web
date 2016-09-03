@@ -148,6 +148,14 @@ ul li{list-style: none;}
 
         //磁盘
         .popup{
+            .aresure{
+                .modal-body p{
+                    font-size:20px;
+                    text-align:center;
+                    font-weight:700;
+                    span{font-size:20px;color:red;margin-right:10px;}
+                }
+            }
             .deled{
                 position:fixed;
                 left:50%;
@@ -180,12 +188,7 @@ ul li{list-style: none;}
         .table{background: #F5F6FA;color: #666;}
     
         .content_con .adduser{width: 500px;}
-        .form-success{border: 1px solid green;}
-        .form-err{border: 1px solid red;}
-        .form-iferr{color: red;}
-        .input_result{position: relative;top: -25px;left: 95%;}
-        p.success{color: green;}
-        .input_con{height: 38px;}
+
 
     //镜像界面
         .add-delTab{
@@ -250,6 +253,13 @@ ul li{list-style: none;}
     }
     
 }
+
+.form-success{border: 1px solid green;}
+.form-err{border: 1px solid red;}
+.form-iferr{color: red;}
+.input_result{position: relative;top: -25px;left: 95%;}
+p.success{color: green;}
+.input_con{height: 38px;}
 
 .modal-backdrop{ background:rgba(255,255,255,0.5);}
 #loading-bar .bar{

@@ -269,6 +269,14 @@ ul li {
         margin-right: 5px; }
     .content .content_con .subpage .gridSection {
       clear: both; }
+    .content .content_con .popup .aresure .modal-body p {
+      font-size: 20px;
+      text-align: center;
+      font-weight: 700; }
+      .content .content_con .popup .aresure .modal-body p span {
+        font-size: 20px;
+        color: red;
+        margin-right: 10px; }
     .content .content_con .popup .deled {
       position: fixed;
       left: 50%;
@@ -309,20 +317,6 @@ ul li {
       color: #666; }
     .content .content_con .content_con .adduser {
       width: 500px; }
-    .content .content_con .form-success {
-      border: 1px solid green; }
-    .content .content_con .form-err {
-      border: 1px solid red; }
-    .content .content_con .form-iferr {
-      color: red; }
-    .content .content_con .input_result {
-      position: relative;
-      top: -25px;
-      left: 95%; }
-    .content .content_con p.success {
-      color: green; }
-    .content .content_con .input_con {
-      height: 38px; }
     .content .content_con .add-delTab .selectedTab {
       width: 90%;
       margin: 10px auto;
@@ -372,6 +366,26 @@ ul li {
       text-align: center;
       line-height: 30px;
       color: #37a9d5; }
+
+.form-success {
+  border: 1px solid green; }
+
+.form-err {
+  border: 1px solid red; }
+
+.form-iferr {
+  color: red; }
+
+.input_result {
+  position: relative;
+  top: -25px;
+  left: 95%; }
+
+p.success {
+  color: green; }
+
+.input_con {
+  height: 38px; }
 
 .modal-backdrop {
   background: rgba(255, 255, 255, 0.5); }

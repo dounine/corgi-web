@@ -15,7 +15,8 @@ require.config({
         'myctrlController':'app/myctrl/myctrlController',
         'formController':'app/form/formController',
         'add-delTab':'app/tab/add-delTab',
-        'directives':'app/directives'
+        'directives':'app/directives',
+        'ali':'app/ali'
     },
     shim: {
         'jquery':{
@@ -40,6 +41,9 @@ require.config({
         },
         'ng-grid.debug':{
         	'deps':['jquery','angular']
+        },
+        'ali':{
+            'deps':['jquery']
         }
     },
   priority: [
@@ -55,6 +59,7 @@ window.name = 'NG_DEFER_BOOTSTRAP!';
 
 require([
 	'app',
+
     'angular',
     'jquery',
     'angular-route',
@@ -67,7 +72,8 @@ require([
     'formController',
     'add-delTab',
     'directives',
-    'bootstrap'
+    'bootstrap',
+    'ali'
 ], function(app,angular,$,angularRoute,angularAnimate,angularLoading) {
 
 

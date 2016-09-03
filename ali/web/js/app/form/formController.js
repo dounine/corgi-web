@@ -5,6 +5,27 @@
 define(['app'],function(app){
     /********严格模式下报错未解决********/
 //    "use strict";
+
+
+    app.controller('login',function($scope,$http,$state,$stateParams){
+        $scope.userdata ={};
+
+        //表单提交
+        $scope.loginding = function () {
+            console.log($scope.userdata)
+        };
+
+    })
+
+
+
+
+
+
+
+
+
+
     //表单删除
     app.controller('user',function ($scope,$http,$state,$stateParams,cfpLoadingBar,$timeout) {
         $scope.start = function() {
@@ -16,14 +37,14 @@ define(['app'],function(app){
             cfpLoadingBar.complete();
 
         }
-        //$scope.isdelpopup = false;
-        //$scope.isdeled = false;
+
         $http.get("data/user.json")
             .success(function (data,index) {
                 $scope.complete();
 
                 var _this = this;
                 $scope.users = data;
+
                 $scope.isdeled = false;
 
 
@@ -32,18 +53,17 @@ define(['app'],function(app){
 
                 $scope.remove = function (id) {
                     var ind=_this.findIndex(id);
-                    //console.log(id)
-                    $scope.sure = function(id){
-                        console.log(id)
+                    console.log(ind)
+                    $scope.delname = data[ind].username;
+                    $scope.sure = function(){
+
+                        console.log('序号'+":"+ data[ind].index+"   "+ '用户名'+":"+$scope.delname+ " " +'已删除！')
+
+                        del();
                     }
 
-                    //$scope.isdeled = true;
-
-                        //del()
-
+                        /*删除成功*/
                         function del(){
-
-
                             if(ind!==-1){
                                 data.splice(ind,1);  //从第index位删除一位
                                 $scope.isdeled = true;
@@ -55,16 +75,15 @@ define(['app'],function(app){
                             },1000)
                         };
 
-
                 }
 
 
-                //找到该元素的索引
+                /*找到该元素的索引*/
                  this.findIndex=function(id){
                     var ind=-1;
                     //angular里的forEach里的value对应的是循环遍历的每一个元素，而key对应的是索引值
                     angular.forEach(data,function(item,key){
-                        		        	//console.log(key)
+                          	//console.log(key)
                             if(item.index===id){
                                 ind=key;
                                 return;

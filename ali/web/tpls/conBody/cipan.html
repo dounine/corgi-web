@@ -1,22 +1,22 @@
 
 
 <div class="gridSection" ng-controller="user">
-	<div class="popup">
+	<div class="popup" >
 
-		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" >
+		<div class="modal fade aresure" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"  >
 			<div class="modal-dialog" role="document">
 				<div class="modal-content">
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 							<span aria-hidden="true">&times;</span></button>
-						<h4 class="modal-title" id="myModalLabel">Modal title</h4>
+						<h4 class="modal-title" id="myModalLabel">删除提示框</h4>
 					</div>
 					<div class="modal-body">
-						<p>确定删除？</p>
+						<p><span class="glyphicon glyphicon-question-sign"></span>确定删除 <i >{{delname}}</i>文件？</p>
 					</div>
 					<div class="modal-footer">
 						<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-						<button type="button" class="btn btn-primary" ng-click="sure(user.index)">确定</button>
+						<button type="button" class="btn btn-primary" ng-click="sure()" data-dismiss="modal">确定</button>
 					</div>
 				</div>
 			</div>
@@ -36,7 +36,7 @@
 		</tr>
 		<tr ng-repeat="user in users">
 			<td>{{user.index}}</td>
-			<td>{{user.username}}</td>
+			<td >{{user.username}}  </td>
 			<td>{{user.password}}</td>
 			<td>{{user.sex}}</td>
 			<td>{{user.email}}</td>
@@ -44,7 +44,7 @@
 			<td>正常</td>
 			<td>
 				<!--<button ng-click="remove(user.index)">删除</button>-->
-				<button  data-toggle="modal" data-target="#myModal" ng-click="remove(user.index)">删除</button>
+				<button type="submit"  data-toggle="modal" data-target="#myModal" ng-click="remove(user.index)">删除</button>
 				<button ui-sref = "home.reviseuser({userId:{{user.index}}})">修改</button>
 
 			</td>
@@ -52,17 +52,5 @@
 		</tr>
 	</table>
 	<button class="btn btn-primary" ui-sref="home.adduesr">增加用户</button>
-	<nav>
-	  <ul class="pagination">
-	    <li class="disabled">
-	      <span>
-	        <span aria-hidden="true">&laquo;</span>
-	      </span>
-	    </li>
-	    <li class="active">
-	      <span>1 <span class="sr-only">(current)</span></span>
-	    </li>
-	    
-	  </ul>
-	</nav>
+
 </div>
